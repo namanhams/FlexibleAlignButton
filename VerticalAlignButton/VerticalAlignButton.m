@@ -187,6 +187,10 @@ x = y;
             CGRect boundingRect = [mutableAttributedString boundingRectWithSize:contentRect.size
                                                                         options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading
                                                                         context:nil];
+#if !__has_feature(objc_arc)
+            [mutableAttributedString release];
+#endif
+            
             return ROUND_SIZE(boundingRect.size);
         }
         else {
