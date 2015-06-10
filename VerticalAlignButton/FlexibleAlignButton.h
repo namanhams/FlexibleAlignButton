@@ -1,5 +1,5 @@
 //
-//  VerticalAlignButton.h
+//  FlexibleAlignButton.h
 //
 //  Created by Pham Hoang Le on 13/3/14.
 //  Copyright (c) 2014 namanhams. All rights reserved.
