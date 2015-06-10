@@ -7,9 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "VerticalAlignButton.h"
-#import "UILabel+Font.h"
-#import "NSMutableAttributedString+DefaultFont.h"
+#import "FlexibleAlignButton.h"
 #import <CoreText/CoreText.h>
 
 #define UIEdgeInsetsLog(insets) NSLog(@"%@", NSStringFromUIEdgeInsets(insets))
@@ -22,9 +20,11 @@ void printSubviews(UIView *view) {
 
 @interface ViewController ()
 
-@property (nonatomic, strong) IBOutlet VerticalAlignButton *btn;
-@property (nonatomic, strong) IBOutlet UITextField *fieldVGap;
+@property (nonatomic, strong) IBOutlet FlexibleAlignButton *btn;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *horizontalSegment;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *verticalSegment;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *alignmentSegment;
+@property (nonatomic, strong) IBOutlet UISegmentedControl *gapSegment;
 
 @end
 
@@ -35,7 +35,7 @@ void printSubviews(UIView *view) {
 {
     [super viewDidLoad];
     
-    self.btn.labelOnTop = true;
+    self.btn.alignment = kButtonAlignmentLabelTop;
     self.btn.layer.borderColor = [UIColor blueColor].CGColor;
     self.btn.layer.borderWidth = 1.0;
     self.btn.backgroundColor = [UIColor clearColor];
@@ -55,26 +55,56 @@ void printSubviews(UIView *view) {
                              range:NSMakeRange(0, 7)];
     
     [self.btn setAttributedTitle:attributedString forState:UIControlStateHighlighted];
+	
+	[self.btn sizeToFit];
 }
 
 - (IBAction)segmentChanged:(id)sender {
     UISegmentedControl *segment = (UISegmentedControl *) sender;
     if(self.horizontalSegment == segment) {
-        if(segment.selectedSegmentIndex == 0) { // Left
+        if(segment.selectedSegmentIndex == 0) {
             self.btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         }
-        else if(segment.selectedSegmentIndex == 1) { // Center
+        else if(segment.selectedSegmentIndex == 1) {
             self.btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         }
-        else if(segment.selectedSegmentIndex == 2) { // Right
+        else if(segment.selectedSegmentIndex == 2) {
             self.btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentRight;
         }
         else { // Fill
             self.btn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentFill;
         }
     }
+	else if(self.verticalSegment == segment) {
+		if(segment.selectedSegmentIndex == 0) { 
+			self.btn.contentVerticalAlignment = UIControlContentVerticalAlignmentTop;
+		}
+		else if(segment.selectedSegmentIndex == 1) {
+			self.btn.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
+		}
+		else if(segment.selectedSegmentIndex == 2) {
+			self.btn.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
+		}
+		else {
+			self.btn.contentVerticalAlignment = UIControlContentVerticalAlignmentFill;
+		}
+	}
+	else if(self.alignmentSegment == segment) {
+		if(segment.selectedSegmentIndex == 0) {
+			self.btn.alignment = kButtonAlignmentImageLeft;
+		}
+		else if(segment.selectedSegmentIndex == 1) {
+			self.btn.alignment = kButtonAlignmentLabelLeft;
+		}
+		else if(segment.selectedSegmentIndex == 2) {
+			self.btn.alignment = kButtonAlignmentImageTop;
+		}
+		else {
+			self.btn.alignment = kButtonAlignmentLabelTop;
+		}
+	}
     else {
-        [self.btn setVerticalGap:[[segment titleForSegmentAtIndex:segment.selectedSegmentIndex] intValue]];
+        [self.btn setGap:[[segment titleForSegmentAtIndex:segment.selectedSegmentIndex] intValue]];
     }
     
     printSubviews(self.btn);
@@ -84,9 +114,9 @@ void printSubviews(UIView *view) {
 - (IBAction)toggleSwitch:(id)sender {
     UISwitch *sw = (UISwitch *)sender;
     if(sw.on)
-        self.btn.labelOnTop = true;
+        self.btn.alignment = kButtonAlignmentLabelTop;
     else
-        self.btn.labelOnTop = false;
+        self.btn.alignment = kButtonAlignmentImageTop;
 }
 
 @end

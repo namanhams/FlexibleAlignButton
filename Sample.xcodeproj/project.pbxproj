@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		37AE483018D2AC7300EA790D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AE482F18D2AC7300EA790D /* CoreText.framework */; };
-		37AE484818D3642200EA790D /* MethodSwizzling.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484018D3642200EA790D /* MethodSwizzling.m */; };
-		37AE484918D3642200EA790D /* NSMutableAttributedString+DefaultFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484318D3642200EA790D /* NSMutableAttributedString+DefaultFont.m */; };
-		37AE484A18D3642200EA790D /* UILabel+Font.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484518D3642200EA790D /* UILabel+Font.m */; };
-		37AE484B18D3642200EA790D /* VerticalAlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484718D3642200EA790D /* VerticalAlignButton.m */; };
+		37AE484B18D3642200EA790D /* FlexibleAlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484718D3642200EA790D /* FlexibleAlignButton.m */; };
 		37AE485218D3647100EA790D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484D18D3647100EA790D /* AppDelegate.m */; };
 		37AE485318D3647100EA790D /* icn_ann_h_and_r_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AE484E18D3647100EA790D /* icn_ann_h_and_r_block.png */; };
 		37AE485418D3647100EA790D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AE484F18D3647100EA790D /* Images.xcassets */; };
@@ -26,14 +23,8 @@
 
 /* Begin PBXFileReference section */
 		37AE482F18D2AC7300EA790D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		37AE484018D3642200EA790D /* MethodSwizzling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzling.m; sourceTree = "<group>"; };
-		37AE484118D3642200EA790D /* MethodSwizzling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzling.h; sourceTree = "<group>"; };
-		37AE484218D3642200EA790D /* NSMutableAttributedString+DefaultFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+DefaultFont.h"; sourceTree = "<group>"; };
-		37AE484318D3642200EA790D /* NSMutableAttributedString+DefaultFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+DefaultFont.m"; sourceTree = "<group>"; };
-		37AE484418D3642200EA790D /* UILabel+Font.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Font.h"; sourceTree = "<group>"; };
-		37AE484518D3642200EA790D /* UILabel+Font.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Font.m"; sourceTree = "<group>"; };
-		37AE484618D3642200EA790D /* VerticalAlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalAlignButton.h; sourceTree = "<group>"; };
-		37AE484718D3642200EA790D /* VerticalAlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VerticalAlignButton.m; sourceTree = "<group>"; };
+		37AE484618D3642200EA790D /* FlexibleAlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexibleAlignButton.h; sourceTree = "<group>"; };
+		37AE484718D3642200EA790D /* FlexibleAlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexibleAlignButton.m; sourceTree = "<group>"; };
 		37AE484C18D3647100EA790D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sample/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		37AE484D18D3647100EA790D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Sample/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		37AE484E18D3647100EA790D /* icn_ann_h_and_r_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icn_ann_h_and_r_block.png; path = Sample/icn_ann_h_and_r_block.png; sourceTree = SOURCE_ROOT; };
@@ -69,14 +60,8 @@
 		37AE483F18D3642200EA790D /* VerticalAlignButton */ = {
 			isa = PBXGroup;
 			children = (
-				37AE484018D3642200EA790D /* MethodSwizzling.m */,
-				37AE484118D3642200EA790D /* MethodSwizzling.h */,
-				37AE484218D3642200EA790D /* NSMutableAttributedString+DefaultFont.h */,
-				37AE484318D3642200EA790D /* NSMutableAttributedString+DefaultFont.m */,
-				37AE484418D3642200EA790D /* UILabel+Font.h */,
-				37AE484518D3642200EA790D /* UILabel+Font.m */,
-				37AE484618D3642200EA790D /* VerticalAlignButton.h */,
-				37AE484718D3642200EA790D /* VerticalAlignButton.m */,
+				37AE484618D3642200EA790D /* FlexibleAlignButton.h */,
+				37AE484718D3642200EA790D /* FlexibleAlignButton.m */,
 			);
 			path = VerticalAlignButton;
 			sourceTree = SOURCE_ROOT;
@@ -204,12 +189,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AE485518D3647100EA790D /* ViewController.m in Sources */,
-				37AE484918D3642200EA790D /* NSMutableAttributedString+DefaultFont.m in Sources */,
-				37AE484A18D3642200EA790D /* UILabel+Font.m in Sources */,
 				37AE485218D3647100EA790D /* AppDelegate.m in Sources */,
-				37AE484818D3642200EA790D /* MethodSwizzling.m in Sources */,
 				37AE485918D3649A00EA790D /* main.m in Sources */,
-				37AE484B18D3642200EA790D /* VerticalAlignButton.m in Sources */,
+				37AE484B18D3642200EA790D /* FlexibleAlignButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
