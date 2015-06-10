@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37AE483018D2AC7300EA790D /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37AE482F18D2AC7300EA790D /* CoreText.framework */; };
-		37AE484B18D3642200EA790D /* FlexibleAlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484718D3642200EA790D /* FlexibleAlignButton.m */; };
 		37AE485218D3647100EA790D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37AE484D18D3647100EA790D /* AppDelegate.m */; };
 		37AE485318D3647100EA790D /* icn_ann_h_and_r_block.png in Resources */ = {isa = PBXBuildFile; fileRef = 37AE484E18D3647100EA790D /* icn_ann_h_and_r_block.png */; };
 		37AE485418D3647100EA790D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37AE484F18D3647100EA790D /* Images.xcassets */; };
@@ -19,12 +18,11 @@
 		37B9861318D1EC41002374FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B9861218D1EC41002374FA /* Foundation.framework */; };
 		37B9861518D1EC41002374FA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B9861418D1EC41002374FA /* CoreGraphics.framework */; };
 		37B9861718D1EC41002374FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B9861618D1EC41002374FA /* UIKit.framework */; };
+		91B106461B28B198004710EA /* FlexibleAlignButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B106451B28B198004710EA /* FlexibleAlignButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		37AE482F18D2AC7300EA790D /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
-		37AE484618D3642200EA790D /* FlexibleAlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexibleAlignButton.h; sourceTree = "<group>"; };
-		37AE484718D3642200EA790D /* FlexibleAlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexibleAlignButton.m; sourceTree = "<group>"; };
 		37AE484C18D3647100EA790D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Sample/AppDelegate.h; sourceTree = SOURCE_ROOT; };
 		37AE484D18D3647100EA790D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Sample/AppDelegate.m; sourceTree = SOURCE_ROOT; };
 		37AE484E18D3647100EA790D /* icn_ann_h_and_r_block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icn_ann_h_and_r_block.png; path = Sample/icn_ann_h_and_r_block.png; sourceTree = SOURCE_ROOT; };
@@ -40,6 +38,8 @@
 		37B9861418D1EC41002374FA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		37B9861618D1EC41002374FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		37B9863118D1EC42002374FA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		91B106441B28B198004710EA /* FlexibleAlignButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlexibleAlignButton.h; sourceTree = "<group>"; };
+		91B106451B28B198004710EA /* FlexibleAlignButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlexibleAlignButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,19 +57,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		37AE483F18D3642200EA790D /* VerticalAlignButton */ = {
-			isa = PBXGroup;
-			children = (
-				37AE484618D3642200EA790D /* FlexibleAlignButton.h */,
-				37AE484718D3642200EA790D /* FlexibleAlignButton.m */,
-			);
-			path = VerticalAlignButton;
-			sourceTree = SOURCE_ROOT;
-		};
 		37B9860618D1EC41002374FA = {
 			isa = PBXGroup;
 			children = (
-				37AE483F18D3642200EA790D /* VerticalAlignButton */,
 				37B9861818D1EC41002374FA /* Sample */,
 				37B9861118D1EC41002374FA /* Frameworks */,
 				37B9861018D1EC41002374FA /* Products */,
@@ -99,6 +89,7 @@
 		37B9861818D1EC41002374FA /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				91B106431B28B198004710EA /* FlexibleAlignButton */,
 				37AE484C18D3647100EA790D /* AppDelegate.h */,
 				37AE484D18D3647100EA790D /* AppDelegate.m */,
 				37AE485018D3647100EA790D /* ViewController.h */,
@@ -121,6 +112,15 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		91B106431B28B198004710EA /* FlexibleAlignButton */ = {
+			isa = PBXGroup;
+			children = (
+				91B106441B28B198004710EA /* FlexibleAlignButton.h */,
+				91B106451B28B198004710EA /* FlexibleAlignButton.m */,
+			);
+			path = FlexibleAlignButton;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -190,8 +190,8 @@
 			files = (
 				37AE485518D3647100EA790D /* ViewController.m in Sources */,
 				37AE485218D3647100EA790D /* AppDelegate.m in Sources */,
+				91B106461B28B198004710EA /* FlexibleAlignButton.m in Sources */,
 				37AE485918D3649A00EA790D /* main.m in Sources */,
-				37AE484B18D3642200EA790D /* FlexibleAlignButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
